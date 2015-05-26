@@ -63,7 +63,7 @@
 
 	<div class="examples">
 		<!--a href="http://localhost/CI/Fbsample/web_login" class="web">Redirect Login<br/>Example</a-->
-		<a href="http://localhost/CI/Fbsample/js_login" class="js">Javascript Login<br/>Example</a>
+		<a href="http://localhost/codeigniter3/Fbsample/js_login" class="js">Javascript Login<br/>Example</a>
 	</div>
 
 
