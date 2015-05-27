@@ -217,7 +217,7 @@
 		console.log(formdata);
 
 		$.ajax({
-			url: '/CI/Fbsample/post',
+			url: '/codeigniter3/Fbsample/post',
 			data: formdata,
 			type: 'POST',
 			dataType: 'json',
