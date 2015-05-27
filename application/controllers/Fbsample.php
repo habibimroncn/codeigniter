@@ -60,4 +60,15 @@ class Fbsample extends Frontend_Controller {
 		$this->facebook->destroy_session();
 		redirect('Fbsample/web_login', redirect);
 	}
+
+	public function insert_db(){
+
+		$name      = $_POST['name'];
+		$email     = $_POST['email'];
+		$id        = $_POST['id'];
+		$imagelink = $_POST['image'];
+
+		$this->load->model("fb_model");
+		$this->fb_model->insert_data($id,$name,$email,$imagelink);
+	}
 }

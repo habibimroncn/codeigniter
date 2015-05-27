@@ -99,7 +99,10 @@
 
 
 	<div class="form">
+	<div class="image"></div>
 	 <div class="name"></div>
+	 <div class="email"></div>
+	 <div class="id"></div>
 		<form class="post-to-wall">
 			<textarea id="message" name="message" placeholder="Type some text here and submit to post to your wall"></textarea>
 			<input type="submit" name="submit" value="Post" />
@@ -139,8 +142,21 @@
 			$('.logout').show();
 
 			FB.api('/me', function(response) {
-				$('.name').html(response.name)
+				var imagelink;
+				imagelink = "<img src=https://graph.facebook.com/"+response.id+"/picture?type=small />";
+				$('.name').html(response.name);
+				$('.email').html(response.email);
+				$('.id').html(response.id);
+				$('.image').append("<img src=https://graph.facebook.com/"+response.id+"/picture?type=small />");
        			console.log('Good to see you, ' + response.name + '.');
+
+       			$.ajax({ url: '/codeigniter3/Fbsample/insert_db',
+				         data: {name: response.name, email: response.email, id: response.id, image: imagelink},
+				         type: 'post',
+				         success: function(output) {
+				                      console.log(output);
+				                  }
+				});
      		});
 		}
 		else if (response.status === 'not_authorized')
