@@ -49,8 +49,8 @@ class Fbsample extends Frontend_Controller {
 	{  
 
 		header('Content-Type: application/json');
-        $text = $this->input->post('message');
-		$result = $this->facebook->publish_text($text);
+        //$text = $this->input->post('message');
+		$result = $this->facebook->publish_text($this->input->post('message'));
 		echo json_encode($result);
 
 	}
@@ -58,6 +58,6 @@ class Fbsample extends Frontend_Controller {
 	public function logout()
 	{
 		$this->facebook->destroy_session();
-		redirect('Fbsample/js_login', redirect);
+		redirect('Fbsample/web_login', redirect);
 	}
 }

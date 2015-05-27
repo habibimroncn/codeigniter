@@ -194,9 +194,9 @@
 	$('.form').on('submit', '.post-to-wall', function(e) {
 		e.preventDefault();
 
-		var TextMessage = $('#message').val();
+		//var TextMessage = $('#message').val();
 		
-        /*
+
 		var formdata = $(this).serialize();
 		console.log(formdata);
 
@@ -210,8 +210,8 @@
 			}
 
 		})
-		*/
-
+		
+/*
 		FB.api('/me/feed', 'post', { message: TextMessage }, function(response) {
 		  if (!response || response.error) {
 		    alert('Error occured');
@@ -219,8 +219,9 @@
 		    alert('Post successful with Post ID: ' + response.id);
 		  }
 		});
+		*/
 
-	})
+	});
 
 	(function(d, s, id){
 		var js, fjs = d.getElementsByTagName(s)[0];
