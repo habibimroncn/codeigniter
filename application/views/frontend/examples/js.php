@@ -174,7 +174,7 @@
       		FB.getLoginStatus(function (response) {
             if (response && response.status === 'connected') {
               FB.logout();
-              window.location.href = "/CI";
+              window.location.href = "/codeigniter3";
                 }
             else {
         	     alert("Empty");
