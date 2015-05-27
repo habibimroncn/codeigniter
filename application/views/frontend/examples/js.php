@@ -171,15 +171,20 @@
 
 	// Function LogOut
 	function FBLogout(){
-      		FB.getLoginStatus(function (response) {
+      		/*FB.getLoginStatus(function (response) {
             if (response && response.status === 'connected') {
               FB.logout();
-              window.location.href = "/codeigniter3";
+              window.location.href = "/CI";
                 }
             else {
         	     alert("Empty");
             }
-          });
+          }); */
+      	FB.logout(function(response) {
+		  // user is now logged out
+		  alert("Logout successful");
+		  window.location.href = "/codeigniter3/Fbsample/js_login";
+		});
        };
 
 	// Get login status
