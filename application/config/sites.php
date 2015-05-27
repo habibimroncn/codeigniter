@@ -113,6 +113,11 @@ $config['sites'] = array(
 				'url'		=> 'user',
 				'icon'		=> 'fa fa-users',
 			),
+			'userfb' => array(
+				'name' => 'Users FB',
+				'url'  => 'userfb',
+				'icon' => 'fa fa-users',
+			),
 			// Example to add sections with subpages
 			'example' => array(
 				'name'		=> 'Examples',
